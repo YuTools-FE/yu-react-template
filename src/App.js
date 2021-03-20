@@ -1,14 +1,29 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { useState } from 'react'
+import styled from 'styled-components';
+import './App.css'
 
-class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <h1> Hello, World! </h1>
-            </div>
-        );
-    }
+function App() {
+    // 创建一个 Title 组件,它将渲染一个附加了样式的 <h1> 标签
+    const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: #cccccc;
+`
+
+    // 创建一个 Wrapper 组件,它将渲染一个附加了样式的 <section> 标签
+    const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`
+
+    // 就像使用常规 React 组件一样使用 Title 和 Wrapper 
+    return (
+        <Wrapper>
+            <Title>
+                Hello World!
+    </Title>
+        </Wrapper>
+    );
 }
 
-export default App;
+export default App
